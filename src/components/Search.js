@@ -6,9 +6,9 @@ export default function Search() {
 	const [value, setValue] = useState('');
     const [results, setResults] = useState([]);
 
-	let timerId = null;
-
 	useEffect(() => {
+        let timerId = null;
+
 		if (value) {
 			timerId = setTimeout(async () => {
 				const { data } = await axios.get(
